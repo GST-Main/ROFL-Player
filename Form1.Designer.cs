@@ -44,36 +44,38 @@
 			this.label1.AutoSize = true;
 			this.label1.Location = new System.Drawing.Point(12, 16);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(195, 15);
+			this.label1.Size = new System.Drawing.Size(136, 15);
 			this.label1.TabIndex = 0;
-			this.label1.Text = "League of Legends.exe destination:";
+			this.label1.Text = "League of Legends.exe :";
 			// 
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(88, 48);
+			this.label2.Location = new System.Drawing.Point(96, 49);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(119, 15);
+			this.label2.Size = new System.Drawing.Size(52, 15);
 			this.label2.TabIndex = 1;
-			this.label2.Text = "*.rofl file destination:";
+			this.label2.Text = "rofl file :";
 			// 
 			// textBox_exe
 			// 
-			this.textBox_exe.Location = new System.Drawing.Point(213, 12);
+			this.textBox_exe.Location = new System.Drawing.Point(154, 12);
 			this.textBox_exe.Name = "textBox_exe";
+			this.textBox_exe.ReadOnly = true;
 			this.textBox_exe.Size = new System.Drawing.Size(346, 23);
 			this.textBox_exe.TabIndex = 2;
 			// 
 			// textBox_rofl
 			// 
-			this.textBox_rofl.Location = new System.Drawing.Point(213, 45);
+			this.textBox_rofl.Location = new System.Drawing.Point(154, 45);
 			this.textBox_rofl.Name = "textBox_rofl";
+			this.textBox_rofl.ReadOnly = true;
 			this.textBox_rofl.Size = new System.Drawing.Size(346, 23);
 			this.textBox_rofl.TabIndex = 3;
 			// 
 			// button_FindEXE
 			// 
-			this.button_FindEXE.Location = new System.Drawing.Point(565, 12);
+			this.button_FindEXE.Location = new System.Drawing.Point(506, 12);
 			this.button_FindEXE.Name = "button_FindEXE";
 			this.button_FindEXE.Size = new System.Drawing.Size(75, 23);
 			this.button_FindEXE.TabIndex = 4;
@@ -83,7 +85,7 @@
 			// 
 			// button_FindROFL
 			// 
-			this.button_FindROFL.Location = new System.Drawing.Point(565, 46);
+			this.button_FindROFL.Location = new System.Drawing.Point(506, 44);
 			this.button_FindROFL.Name = "button_FindROFL";
 			this.button_FindROFL.Size = new System.Drawing.Size(75, 23);
 			this.button_FindROFL.TabIndex = 5;
@@ -93,8 +95,9 @@
 			// 
 			// comboBox_Language
 			// 
+			this.comboBox_Language.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBox_Language.FormattingEnabled = true;
-			this.comboBox_Language.Location = new System.Drawing.Point(213, 77);
+			this.comboBox_Language.Location = new System.Drawing.Point(154, 78);
 			this.comboBox_Language.Name = "comboBox_Language";
 			this.comboBox_Language.Size = new System.Drawing.Size(346, 23);
 			this.comboBox_Language.TabIndex = 6;
@@ -102,7 +105,7 @@
 			// label3
 			// 
 			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(145, 80);
+			this.label3.Location = new System.Drawing.Point(86, 82);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(62, 15);
 			this.label3.TabIndex = 7;
@@ -110,7 +113,8 @@
 			// 
 			// button_Play
 			// 
-			this.button_Play.Location = new System.Drawing.Point(565, 77);
+			this.button_Play.Enabled = false;
+			this.button_Play.Location = new System.Drawing.Point(506, 78);
 			this.button_Play.Name = "button_Play";
 			this.button_Play.Size = new System.Drawing.Size(75, 23);
 			this.button_Play.TabIndex = 8;
@@ -121,7 +125,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(654, 121);
+			this.ClientSize = new System.Drawing.Size(599, 121);
 			this.Controls.Add(this.button_Play);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.comboBox_Language);
