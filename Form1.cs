@@ -11,6 +11,7 @@ namespace ROFL_Player
 		
 		string? exePath;
 		string? roflPath;
+		string? selectedLang;
 
 		public Form1()
 		{
@@ -47,7 +48,8 @@ namespace ROFL_Player
 			var result = openFileDialog.ShowDialog();
 			if (result == DialogResult.OK)
 			{
-				textBox_rofl.Text = openFileDialog.FileName;
+				roflPath = openFileDialog.FileName;
+				textBox_rofl.Text = roflPath;
 			}
 		}
 
@@ -77,6 +79,11 @@ namespace ROFL_Player
 
 			(string, string)[] available = Array.FindAll(languages, language => codes.Contains(language.code));
 			availableLangs = available;
+		}
+
+		private void comboBox_Language_SelectedValueChanged(object sender, EventArgs e)
+		{
+			selectedLang = comboBox_Language.Text;
 		}
 	}
 }
