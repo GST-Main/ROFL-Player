@@ -27,14 +27,19 @@ namespace ROFL_Player
 				Title = "Select a League of Legends.exe"
 			};
 			var result = openFileDialog.ShowDialog();
+
 			if (result == DialogResult.OK)
 			{
 				exePath = openFileDialog.FileName;
 				textBox_exe.Text = exePath;
+
 				UpdateAvailableLanguages(Path.GetDirectoryName(exePath));
+
 				if (availableLangs != null)
 					UpdateLangComboItems();
 			}
+
+			UpdatePlayButton();
 		}
 
 		private void button_FindROFL_Click(object sender, EventArgs e)
@@ -46,11 +51,14 @@ namespace ROFL_Player
 				Title = "Select a replay file"
 			};
 			var result = openFileDialog.ShowDialog();
+
 			if (result == DialogResult.OK)
 			{
 				roflPath = openFileDialog.FileName;
 				textBox_rofl.Text = roflPath;
 			}
+
+			UpdatePlayButton();
 		}
 
 		private void UpdateLangComboItems()
@@ -67,6 +75,7 @@ namespace ROFL_Player
 			string dataDirectory = Path.Combine(exeDirectory, "DATA", "FINAL");
 			string[] filePaths = Directory.GetFiles(dataDirectory);
 			string[] files = filePaths.Select(elem => Path.GetFileName(elem)).ToArray();
+
 			List<string> codes = new();
 			foreach (string file in files)
 			{
@@ -84,6 +93,16 @@ namespace ROFL_Player
 		private void comboBox_Language_SelectedValueChanged(object sender, EventArgs e)
 		{
 			selectedLang = comboBox_Language.Text;
+
+			UpdatePlayButton();
+		}
+
+		private void UpdatePlayButton()
+		{
+			if (exePath != null && roflPath != null && selectedLang != null)
+				button_Play.Enabled = true;
+			else
+				button_Play.Enabled = false;
 		}
 	}
 }
