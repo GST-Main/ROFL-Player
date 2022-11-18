@@ -79,6 +79,7 @@
 			this.button_FindEXE.TabIndex = 4;
 			this.button_FindEXE.Text = "Find";
 			this.button_FindEXE.UseVisualStyleBackColor = true;
+			this.button_FindEXE.Click += new System.EventHandler(this.button_FindEXE_Click);
 			// 
 			// button_FindROFL
 			// 
@@ -88,6 +89,7 @@
 			this.button_FindROFL.TabIndex = 5;
 			this.button_FindROFL.Text = "Find";
 			this.button_FindROFL.UseVisualStyleBackColor = true;
+			this.button_FindROFL.Click += new System.EventHandler(this.button_FindROFL_Click);
 			// 
 			// comboBox_Language
 			// 
@@ -108,7 +110,7 @@
 			// 
 			// button_Play
 			// 
-			this.button_Play.Location = new System.Drawing.Point(566, 77);
+			this.button_Play.Location = new System.Drawing.Point(565, 77);
 			this.button_Play.Name = "button_Play";
 			this.button_Play.Size = new System.Drawing.Size(75, 23);
 			this.button_Play.TabIndex = 8;
