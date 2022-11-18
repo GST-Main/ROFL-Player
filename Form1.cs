@@ -104,5 +104,21 @@ namespace ROFL_Player
 			else
 				button_Play.Enabled = false;
 		}
+
+		private void button_Play_Click(object sender, EventArgs e)
+		{
+			var startInfo = new ProcessStartInfo(exePath)
+			{
+				Arguments = "\"" + roflPath + "\" \"" + "-Locale=" + GetLocaleCode(selectedLang) + "\"",
+				WorkingDirectory = Path.GetDirectoryName(exePath)
+			};
+
+			Process.Start(startInfo);
+		}
+
+		private string GetLocaleCode(string language)
+		{
+			return Array.Find(languages, elem => elem.language == language).code;
+		}
 	}
 }

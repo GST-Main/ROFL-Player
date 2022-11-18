@@ -121,6 +121,7 @@
 			this.button_Play.TabIndex = 8;
 			this.button_Play.Text = "Play!";
 			this.button_Play.UseVisualStyleBackColor = true;
+			this.button_Play.Click += new System.EventHandler(this.button_Play_Click);
 			// 
 			// Form1
 			// 
